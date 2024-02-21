@@ -28,7 +28,7 @@ app.use(cookieParser())
 // CORS
 app.use(cors({
     credentials: true,
-    origin: process.env.NODE_ENV !== 'development' ? 'https://www.loganstjohn.codes/' : 'http://localhost:5173'
+    origin: process.env.NODE_ENV !== 'development' ? 'https://www.loganstjohn.codes' : 'http://localhost:5173'
 }))
 
 // Sendgrid connection
