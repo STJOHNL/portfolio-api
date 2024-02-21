@@ -10,6 +10,7 @@ const port = process.env.PORT || 3000
 
 // Routes
 import mainRoutes from './routes/main.js'
+import contactRoutes from './routes/contact.js'
 
 // Connect to MongoDB
 connectDB()
@@ -34,6 +35,7 @@ app.use(cors({
 sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 app.use('/api', mainRoutes)
+app.use('/api/contact', contactRoutes)
 
 app.listen(port, () => {
     console.log(`Server is running`)
